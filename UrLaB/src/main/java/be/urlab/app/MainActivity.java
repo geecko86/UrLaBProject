@@ -1,6 +1,7 @@
 package be.urlab.app;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -58,11 +59,19 @@ public class MainActivity extends Activity {
     }
 
     public void openIRC(View v) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://webchat.freenode.net/?channels=urlab")));
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://webchat.freenode.net/?channels=urlab")));
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this,"No app found",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void openMaps(View v) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:50.81292,4.38438?q=131+avenue+Buyl+1050+Ixelles")));
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("geo:50.81292,4.38438?q=131+avenue+Buyl+1050+Ixelles")));
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this,"No app found",Toast.LENGTH_LONG).show();
+        }
     }
 
 }
