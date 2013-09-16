@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/status_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/urlab_status" />
+
+    <TextView
+        android:id="@+id/status_val"
+        android:text="@string/status_closed"
+        android:textColor="#A80000"
+        android:textSize="24sp"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/pamela_str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:text="@string/pamela_status" />
+
+    <TextView
+        android:id="@+id/pamela_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/IRC_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="@string/IRC"
+        android:onClick="openIRC"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_irc"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/maps_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:text="@string/maps"
+        android:textStyle="bold"
+        android:onClick="openMaps"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_maps"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>
